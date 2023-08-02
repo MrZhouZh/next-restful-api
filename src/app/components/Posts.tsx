@@ -1,4 +1,4 @@
-import { getPostsMeta, getSortedPostsData } from "~/libs/posts";
+import { getPostsMeta } from "~/libs/posts";
 import ListItem from "./ListItem";
 
 export default async function Posts() {

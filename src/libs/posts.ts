@@ -80,7 +80,6 @@ export async function getPostByName(fileName: string) {
 }
 
 export async function getPostsMeta()  {
-  try {
   const res = await fetch(
     `https://api.github.com/repos/MrZhouZh/test-blogposts/git/trees/main?recursive=1`,
     // `https://api.github.com/repos/MrZhouZh/test-blogposts/git/trees/main`,
@@ -108,9 +107,6 @@ export async function getPostsMeta()  {
   }
 
   return posts.sort((a, b) => a.date < b.date ? 1 : -1)
-  } catch(err) {
-    console.log('getPostsMeta err', err)
-  }
 }
 
 // export function getSortedPostsData() {
