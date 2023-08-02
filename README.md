@@ -18,6 +18,23 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
+## API
+
+> `GET` /api/todos
+>
+> `POST` /api/todos
+>
+> `PUT` /api/todos
+>
+> `DELETE` /api/todos
+
+```sh
+curl --request GET \
+     --url 'http://localhost:3000/api/todos' \
+     --header 'User-Agent: Thunder Client (https://www.thunderclient.com)' \
+     --header 'accept: application/json'
+```
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
