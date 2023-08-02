@@ -49,7 +49,6 @@ export async function PUT(req: Request) {
   })
 
   const updateTodo: Todo = await res.json()
-  console.log({ res: updateTodo });
   return NextResponse.json(updateTodo)
 }
 
