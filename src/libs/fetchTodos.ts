@@ -1,4 +1,4 @@
-export const TODO_SERVER_URL =  `http://localhost:3000/api/todos`
+export const TODO_SERVER_URL =  `${process.env.API_URL}/api/todos`
 
 export async function fetchTodo(id: string) {
   const res = await fetch(`${TODO_SERVER_URL}/${id}`)

@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server"
 
 const allowOrigins = process.env.NODE_ENV === 'production'
-  ? ['https://www.yoursite.com', 'https://yoursite.com']
-  : ['http://localhost:3000']
+  ? ['https://www.yoursite.com', `${process.env.API_URL}`]
+  : [`${process.env.API_URL}`]
 
 export function middleware(req: Request) {
   const origin = req.headers.get('origin')
