@@ -17,6 +17,12 @@ export async function getTodos() {
 }
 
 export async function postTodo<T extends Partial<Todo>>({ userId, title }: T) {
+  console.log('postTodo ---', {
+    userId,
+    title,
+    TODO_SERVER_URL,
+  });
+  
   const res = await fetch(`${TODO_SERVER_URL}`, {
     method: 'POST',
     headers: {
