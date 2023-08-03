@@ -26,13 +26,15 @@ type Filetree = {
 
 // const postsDir = path.join(process.cwd(), 'src', 'blogposts')
 
+const headers = {
+  Accept: 'application/vnd.github+json',
+  Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+  'X-Github-Api-Version': '2022-11-28',
+}
+
 export async function getPostByName(fileName: string) {
   const res = await fetch(`https://raw.githubusercontent.com/MrZhouZh/test-blogposts/main/${fileName}`, {
-    headers: {
-      Accept: 'application/vnd.github+json',
-      Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
-      'X-Github-Api-Version': '2022-11-28',
-    }
+    headers,
   })
 
   if (!res.ok) return undefined
@@ -82,13 +84,8 @@ export async function getPostByName(fileName: string) {
 export async function getPostsMeta()  {
   const res = await fetch(
     `https://api.github.com/repos/MrZhouZh/test-blogposts/git/trees/main?recursive=1`,
-    // `https://api.github.com/repos/MrZhouZh/test-blogposts/git/trees/main`,
     {
-      headers: {
-        Accept: 'application/vnd.github+json',
-        Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
-        'X-GitHub-Api-Version': '2022-11-28',
-      }
+      headers,
     }
   )
 

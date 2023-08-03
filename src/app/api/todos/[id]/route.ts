@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server"
 
 const DATA_SOURCE_URL = 'https://jsonplaceholder.typicode.com/todos'
-const API_KEY: string = process.env.DATA_API_KEY as string
 
 export async function GET(req: Request) {
   const id = req.url.slice(req.url.lastIndexOf('/') + 1)

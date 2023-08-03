@@ -1,5 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  env: {
+    DATA_API_KEY: process.env.DATA_API_KEY,
+    API_URL: process.env.API_URL,
+    GITHUB_TOKEN: process.env.GITHUB_TOKEN,
+  },
   images: {
     remotePatterns: [
       {
