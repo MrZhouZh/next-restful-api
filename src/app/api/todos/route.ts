@@ -15,6 +15,12 @@ export async function POST(req: Request) {
   const { userId, title }: Partial<Todo> = await req.json()
   if (!userId || !title) return NextResponse.json({ message: 'Missing required data' })
 
+  console.log('todo api', {
+    userId,
+    title,
+    DATA_SOURCE_URL,
+  });
+  
   const res = await fetch(`${DATA_SOURCE_URL}`, {
     method: 'POST',
     headers: {

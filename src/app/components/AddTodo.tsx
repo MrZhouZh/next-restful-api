@@ -26,7 +26,7 @@ export default function AddTodo() {
     }
 
     setIsFetching(true)
-    const res = await postTodo({ userId, title })
+    await postTodo({ userId, title })
     setIsFetching(false)
     setData(prev => ({
       ...prev,
