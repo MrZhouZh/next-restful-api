@@ -88,7 +88,6 @@ Error occurred prerendering page "/todos". Read more: https://nextjs.org/docs/me
 
 > reference: ["Fetch failed" error in production mode](https://github.com/vercel/next.js/issues/49578)
 
-``
 ```tsx
 // src/app/todos/page.tsx
 export const runtime = "edge"
