@@ -6,10 +6,10 @@ export default function Navbar() {
     href: string
     icon: React.JSX.Element
   }[] = [
-    {
-      href: 'https://www.youtube.com/channel/UC6A66BIHpJYhOzf4zqk125Q',
-      icon: <FaYoutube />
-    },
+    // {
+    //   href: 'https://www.youtube.com/channel/UC6A66BIHpJYhOzf4zqk125Q',
+    //   icon: <FaYoutube />
+    // },
     {
       href: 'https://twitter.com/JacezChou',
       icon: <FaTwitter />
@@ -18,10 +18,10 @@ export default function Navbar() {
       href: 'https://github.com/MrZhouZh',
       icon: <FaGithub />
     },
-    {
-      href: 'https://www.facebook.com/dylan.zhou.982/',
-      icon: <FaFacebook />
-    }
+    // {
+    //   href: 'https://www.facebook.com/dylan.zhou.982/',
+    //   icon: <FaFacebook />
+    // }
   ]
   return (
     <nav className="bg-slate-600 p-4 sticky top-0 z-10 drop-shadow">
